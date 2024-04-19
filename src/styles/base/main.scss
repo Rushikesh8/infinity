@@ -1,0 +1,120 @@
+$background-color: #F6F6F2;
+$primary-color: #0CA678; 
+$secondary-color: red;
+:root {
+    font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}  
+body {
+    background-color: $background-color;
+}
+  
+.title {
+    font-family:
+      Greycliff CF,
+      var(--mantine-font-family);
+    font-weight: 900;
+}
+.primary-background-color {
+    background-color: $primary-color !important;
+}
+
+.login-container {
+    .m_8fb7ebe7:focus, .m_8fb7ebe7:focus-within { 
+        outline: none;
+        --input-bd: #0CA678 !important;
+    }
+}
+
+
+////////////////////////////////////////////
+/// 
+/// Search
+/// 
+
+
+.navbarMain {
+  flex: 1;
+}
+
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--mantine-font-size-sm);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  font-weight: 500;
+
+  &:hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+
+    & .linkIcon {
+      color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    }
+  }
+
+  &[data-active] {
+    &,
+    &:hover {
+      background-color: var(--mantine-color-blue-light);
+      color: var(--mantine-color-blue-light-color);
+
+      & .linkIcon {
+        color: var(--mantine-color-blue-light-color);
+      }
+    }
+  }
+}
+
+.linkIcon {
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+  margin-right: var(--mantine-spacing-sm);
+  width: rem(25px, 16px);
+  height: rem(25px, 16px);
+}
+
+.details-card {
+    padding-left: 0px !important;
+    position: relative !important;
+    min-height: 600px;
+}
+.options {
+    width: 25% ;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: #F0F3F5;
+    .mantine-SegmentedControl-label {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+.tab-border {
+    border: 1px solid #e5e7eb;
+}
+.content-card {
+    margin-left: 26%;
+}
+.definition-heading {
+    margin-bottom: 12px !important;
+}
+.definition-acronym {
+    margin-right: 5px !important;
+}
+.definition-phrase {
+    margin-left: 5px !important;
+}
+
+
+
+// .login-container .m_f2d85dd2:focus {
+//     outline: none;
+//     --input-bd: #0CA678 !important;
+// }
+ 
+  
+  
