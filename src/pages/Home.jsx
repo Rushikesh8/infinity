@@ -38,7 +38,7 @@ const Home = () => {
         {regulations?.map((ele,idx) => { 
             return <Card withBorder padding="lg" radius="md" className='w-3/12 hover:cursor-pointer hover:bg-gray-100' onClick={() => navigate(REGULATION_DETAILS?.replace(':regulation_id', ele?.id))}>
         <Group justify="space-between">
-        <ReactCountryFlag countryCode={COUNTRY_CODE_MAPPING[ele?.country]} style={{ fontSize: "2rem" }} />
+        <ReactCountryFlag countryCode={COUNTRY_CODE_MAPPING[ele?.country?.toUpperCase()] || ""} style={{ fontSize: "2rem" }} />
         <Tooltip label="Until Enforcement">
             <Badge className='primary-background-color'>{calculateDaysLeft(ele?.date_of_enforcement)} days</Badge>
             </Tooltip>

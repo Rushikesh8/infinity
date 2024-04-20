@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let baseURL = "http://localhost:8000/api/"
+let baseURL = "https://mosaic-qzmg.onrender.com/api/"
 const axiosInstance = axios.create({
 	baseURL: baseURL,
 	timeout: 500000,
