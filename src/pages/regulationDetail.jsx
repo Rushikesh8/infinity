@@ -7,6 +7,7 @@ import ReactCountryFlag from "react-country-flag";
 import toast from "react-hot-toast";
 import {formatDateToString, isDateGreaterThanToday} from "../utils.js"
 import { SegmentedControl, Accordion, List } from "@mantine/core";
+import {COUNTRY_CODE_MAPPING} from "../utils.js"
 
 const RegulationDetail = () => {
   const { regulation_id = 0 } = useParams();
@@ -92,8 +93,7 @@ const RegulationDetail = () => {
         const formattedDate = formatDateToString(dateString);
         return <Badge color={isDateGreater? "teal": "red"}>{formattedDate}</Badge>
   }
-  console.log('regulationDetails', regulationDetails)
-  console.log('deadlinesDefinitionLinkData', deadlinesDefinitionLinkData)
+
   return (
     <div className="px-6 mt-6">
       {regulation_id && regulation ? (
@@ -113,7 +113,7 @@ const RegulationDetail = () => {
                   <Text span fw={500} c="bright">
                     {regulation?.country}
                     <ReactCountryFlag
-                      countryCode="GB"
+                      countryCode={COUNTRY_CODE_MAPPING[regulation?.country?.toUpperCase()] || ""}
                       style={{ fontSize: "2rem", marginLeft: "2px" }}
                     />
                   </Text>

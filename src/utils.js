@@ -1,5 +1,9 @@
 export const COUNTRY_CODE_MAPPING = {
-    "UK": "GB"
+    "UK": "GB",
+    "USA": "US",
+    "INDIA": "IN",
+    "FRANCE": "FR",
+    "NORWAY": "NO"
 }
 
 export const calculateDaysLeft = (dateOfEnforcementArray) => {

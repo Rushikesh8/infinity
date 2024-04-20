@@ -15,7 +15,6 @@ const Home = () => {
         try {
             const response = await axiosInstance.get(FETCH_REGULATION + (country ? `?country=${country}` : ""))
             if(response?.status === 200){
-                console.log("response?.data?.regulations", response?.data?.regulations)
                 setRegulations([...response?.data?.regulations])
             }
           }
